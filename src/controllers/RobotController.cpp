@@ -11,18 +11,18 @@ RobotController::~RobotController(){
 }
 
 
-void RobotController::setup(RobotParameters & params){
-    robot.setup(params.ipAddress,0, 1);
+void RobotController::setup(RobotParameters & params,RobotType m){
+    robot.setup(params.ipAddress,0, 1,m);
     robot.start();
     robotParams = &params;
-    movement.setup();
+    movement.setup(m);
 }
 
-void RobotController::setup(string ipAddress, RobotParameters & params){
-    robot.setup(ipAddress,0, 1);
+void RobotController::setup(string ipAddress, RobotParameters & params,RobotType m){
+    robot.setup(ipAddress,0, 1,m);
     robot.start();
     robotParams = &params;
-    movement.setup();
+    movement.setup(m);
 }
 
 vector<double> RobotController::getJointPosition(){

@@ -33,7 +33,7 @@ void ofApp::setup(){
     setupViewports();
     
     parameters.setup();
-    robot.setup("192.168.1.9",parameters); // <-- swap with your robot's ip address
+    robot.setup("192.168.1.9",parameters,UR10); // <-- swap with your robot's ip address
     
     setupGUI();
     positionGUI();

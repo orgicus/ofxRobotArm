@@ -18,12 +18,12 @@ public:
     
     /// \brief creates and connects to a new robot using a default IP Address
     /// \params params default parameters for the robot & GUI
-    void setup(RobotParameters & params);
+    void setup(RobotParameters & params,RobotType m=UR5);
     
     /// \brief creates and connects to a new robot
     /// \params ipAddress ipAddress of the robot
     /// \params params default parameters for the robot & GUI
-    void setup(string ipAddress, RobotParameters & params);
+    void setup(string ipAddress, RobotParameters & params, RobotType m=UR5);
     
     void updateMovement();
     void updateData();
